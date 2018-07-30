@@ -177,7 +177,7 @@ class OS
 
     def self.windows?
       # Added check for the new Win10 Linux subsystem
-      ENV['OS'] == 'Windows_NT' || !(/Microsoft/ =~ `uname -a`).nil?
+      ENV['OS'] == 'Windows_NT' || !(/Microsoft/ =~ `uname -r`).nil?
     end
 
     def self.linux?
